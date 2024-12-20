@@ -29,7 +29,7 @@ export default function AdminSignUp() {
     }
     setError(""); // Clear previous errors
     try {
-      await axios.post("http://localhost:5000/api/adminsignup", formData);
+      await axios.post("https://conference-app-backend-04hp.onrender.com/api/adminsignup", formData);
       navigate("/adminlogin"); // Navigate to admin login page on success
     } catch (err) {
       setError(err.response?.data?.message || "Something went wrong!");
