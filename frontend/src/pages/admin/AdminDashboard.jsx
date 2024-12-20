@@ -10,7 +10,7 @@ export default function AdminDashboard() {
   const fetchRequests = async () => {
     try {
       const response = await axios.get(
-        "http://localhost:5000/api/conference/requests"
+        "https://conference-app-backend-04hp.onrender.com/api/conference/requests"
       );
       setRequests(response.data);
     } catch (err) {
@@ -22,7 +22,7 @@ export default function AdminDashboard() {
   const handleApproval = async (requestId, status) => {
     try {
       const response = await axios.post(
-        "http://localhost:5000/api/conference/approve-reject",
+        "https://conference-app-backend-04hp.onrender.com/api/conference/approve-reject",
         {
           requestId,
           status,
